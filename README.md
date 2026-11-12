@@ -15,3 +15,4 @@ The scripts and setup files in this repository are compiled and modified solely 
 ## 🚀 วิธีการติดตั้ง (Installation)
 1. คลิกที่คำว่า Code สีเขียว
 2. คลิก Download ZIP
+3. ทำตามคลิปวีดีโอ https://youtu.be/a-MPtxLP5pc
