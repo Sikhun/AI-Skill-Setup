@@ -1,0 +1,101 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Chonburi;src:url(../fonts/Chonburi-Regular.ttf)}
+@font-face{font-family:Trirong;src:url(../fonts/Trirong-Regular.ttf)}
+@font-face{font-family:Trirong;font-weight:700;src:url(../fonts/Trirong-Bold.ttf)}
+@font-face{font-family:Playfair;font-weight:700;src:url(../fonts/PlayfairDisplay-Bold.ttf)}
+@font-face{font-family:Playfair;font-weight:900;src:url(../fonts/PlayfairDisplay-Black.ttf)}
+@font-face{font-family:SpecialElite;src:url(../fonts/SpecialElite-Regular.ttf)}
+:root{--paper:#EFE4CC;--paper2:#D8C39B;--ink:#3A2A1E;--soft:#7A5C43;--sang:#A8432A;--sang2:#C4673F;--gold:#B08A3E}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#222;width:1080px}
+.f{width:1080px;height:1920px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,#F4EBD6 0%,var(--paper) 55%,var(--paper2) 100%)}
+.fiber{position:absolute;inset:0;mix-blend-mode:multiply;opacity:.55;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='500' height='500'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='3' seed='4'/><feColorMatrix values='0 0 0 0 .55 0 0 0 0 .45 0 0 0 0 .3 0 0 0 .55 0'/></filter><rect width='500' height='500' filter='url(%23n)'/></svg>")}
+.blot{position:absolute;inset:0;mix-blend-mode:multiply;opacity:.35;background:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1080' height='1920'><filter id='b'><feTurbulence type='fractalNoise' baseFrequency='.004' numOctaves='3' seed='9'/><feColorMatrix values='0 0 0 0 .6 0 0 0 0 .45 0 0 0 0 .25 0 0 0 1.2 -.45'/></filter><rect width='1080' height='1920' filter='url(%23b)'/></svg>")}
+.burn{position:absolute;inset:0;box-shadow:inset 0 0 160px 40px rgba(110,72,36,.55),inset 0 0 30px 6px rgba(70,40,20,.5)}
+.scrib{position:absolute;inset:0;width:1080px;height:1920px;opacity:.5}
+.host{position:absolute}
+.card{position:absolute}
+.page{background:none!important;box-shadow:none!important;clip-path:none!important}
+.h{position:absolute;left:110px;right:130px;text-align:center;font-family:Chonburi;color:var(--ink);line-height:1.12}
+.lbl{font-family:Playfair;font-weight:700;letter-spacing:.22em;color:var(--soft);font-size:38px}
+.sang{color:var(--sang)}
+.note{font-family:Trirong;font-weight:700;color:var(--ink)}
+.cav{font-family:SpecialElite;color:var(--soft)}
+svg.ov{position:absolute;left:0;top:0;width:1080px;height:1920px;overflow:visible}
+.ln{fill:none;stroke:var(--ink);stroke-linecap:round;stroke-linejoin:round}
+.page{position:absolute;background:#F7F0DF;box-shadow:6px 10px 0 rgba(90,60,30,.18);clip-path:polygon(0 2%,8% 0,30% 1.5%,55% 0,80% 1%,100% 0,99% 30%,100% 60%,98.5% 100%,70% 98.5%,40% 100%,12% 98%,0 100%,1.2% 60%,0 30%)}
+.tape{position:absolute;width:150px;height:46px;background:rgba(222,205,160,.75);box-shadow:0 1px 0 rgba(0,0,0,.08)}
+.seal{position:absolute;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 38% 35%,#C4673F,#A8432A 55%,#7E2E1C);display:flex;align-items:center;justify-content:center;font-family:Playfair;font-weight:900;color:#F3D9C4;font-size:30px;letter-spacing:.06em;box-shadow:3px 5px 0 rgba(80,30,15,.3);clip-path:polygon(50% 0,63% 4%,78% 3%,86% 14%,97% 22%,96% 38%,100% 52%,95% 66%,97% 80%,84% 88%,74% 98%,58% 96%,45% 100%,31% 95%,17% 97%,10% 84%,2% 74%,4% 58%,0 44%,5% 30%,3% 16%,16% 9%,28% 2%)}
+.seal span{border:3px solid rgba(243,217,196,.6);border-radius:50%;width:104px;height:104px;display:flex;align-items:center;justify-content:center}
+</style></head><body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<filter id="rough"><feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="2"/><feDisplacementMap in="SourceGraphic" scale="5"/></filter>
+<filter id="chalk"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="5" result="t"/><feColorMatrix in="t" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1.6 1.25" result="m"/><feComposite in="SourceGraphic" in2="m" operator="in" result="c"/><feDisplacementMap in="c" in2="t" scale="4"/></filter>
+</defs></svg>
+
+<!-- A: hook over a faded sketch backdrop -->
+<div class="f" id="A">
+<img src="../backdrops/acropolis.svg" style="position:absolute;left:0;top:470px;width:1080px;opacity:.5;mix-blend-mode:multiply">
+<svg class="scrib" data-seed="11"></svg>
+<div class="h" style="top:270px;left:70px;right:90px"><div class="lbl">LOGOS · I</div>
+<svg width="520" height="40" viewBox="0 0 520 40" style="margin:10px auto 64px;display:block"><g class="ln" stroke-width="3" filter="url(#rough)"><path d="M10 22 Q130 14 230 20"/><path d="M290 20 Q400 26 510 18"/><path d="M260 6 L274 20 L260 34 L246 20 Z" fill="#B08A3E" stroke="#3A2A1E"/></g></svg>
+<div style="font-size:120px">ทำไมคนเก่ง</div><div style="font-size:84px;white-space:nowrap" class="sang">ถึงผัดวันประกันพรุ่ง?</div></div>
+<svg class="ov"><path class="ln" d="M150 712 C380 728 660 720 930 704" stroke="#A8432A" stroke-width="9" filter="url(#chalk)"/><path class="ln" d="M200 730 C460 738 720 730 890 722" stroke="#A8432A" stroke-width="4" opacity=".6" filter="url(#chalk)"/></svg>
+<img class="host boil" data-src="../host/socrates/03-explaining/f{i}.png" style="width:1060px;left:40px;bottom:-130px">
+<div class="fiber"></div><div class="blot"></div><div class="burn"></div></div>
+
+<!-- B: column-framed tablet with rule I -->
+<div class="f" id="B"><img src="../backdrops/columns.svg" style="position:absolute;left:0;top:380px;width:1080px;opacity:.22;mix-blend-mode:multiply"><svg class="scrib" data-seed="23"></svg>
+<div class="h" style="top:250px;font-size:100px">กฎข้อที่ <span style="font-family:Playfair;font-weight:900;font-size:120px" class="sang">I</span></div>
+<img class="card boil" data-src="../props/torn-frames/torn-card-760x560/f{i}.png" style="left:100px;top:440px;width:880px;transform:rotate(-1.5deg)">
+<div style="position:absolute;left:228px;top:540px;width:624px" class="note">
+<div style="font-size:62px;text-align:center;color:var(--ink)">เริ่มให้เล็กที่สุด</div>
+<div style="font-size:50px;margin-top:40px;padding-left:20px;position:relative">อ่านหนังสือ <span style="position:relative">20 หน้า<svg style="position:absolute;left:-14px;top:18px;width:230px;height:60px;overflow:visible"><path class="ln" d="M4 40 Q100 18 220 22" stroke="#A8432A" stroke-width="10" filter="url(#chalk)"/></svg></span></div>
+<div style="font-size:56px;margin-top:30px;padding-left:20px;position:relative">เหลือแค่ <span class="sang" style="position:relative">1 หน้า<svg style="position:absolute;left:-30px;top:-14px;width:240px;height:120px;overflow:visible"><path class="ln" d="M120 8 C40 4 0 40 14 70 C30 104 170 112 214 76 C246 44 200 6 110 12 C90 14 70 20 60 26" stroke="#A8432A" stroke-width="5" filter="url(#chalk)"/></svg></span></div>
+<div class="cav" style="font-size:40px;text-align:right;margin-top:26px">— tiny step, big habit</div>
+</div>
+<div class="seal" style="left:160px;top:930px;transform:rotate(-10deg)"><span style="font-size:19px;letter-spacing:0">SOPHIA</span></div>
+<img class="host boil" data-src="../host/socrates/01-thinking/f{i}.png" style="width:960px;left:150px;bottom:-150px">
+<div class="fiber"></div><div class="blot"></div><div class="burn"></div></div>
+
+<!-- C: two sketch pages compared -->
+<div class="f" id="C"><img src="../backdrops/acropolis.svg" style="position:absolute;left:-200px;top:900px;width:1480px;opacity:.25;mix-blend-mode:multiply"><svg class="scrib" data-seed="37"></svg>
+<div class="h" style="top:270px;font-size:104px">อย่ารอ<span class="sang">วันจันทร์</span></div>
+<img class="card boil" data-src="../props/torn-frames/torn-card-420x340/f{i}.png" style="left:30px;top:485px;width:530px;transform:rotate(-3deg)"><div class="page" style="left:90px;top:540px;width:410px;height:330px;transform:rotate(-3deg)"><div class="note" style="font-size:70px;text-align:center;margin-top:110px">วันจันทร์</div>
+<svg style="position:absolute;inset:0;width:410px;height:330px"><path class="ln" d="M60 70 L350 270 M340 60 L70 280" stroke="#A8432A" stroke-width="13" filter="url(#chalk)"/></svg>
+<div class="cav" style="position:absolute;left:24px;top:14px;font-size:32px">fig. 1</div></div>
+<div class="tape" style="left:220px;top:520px;transform:rotate(-6deg)"></div>
+<img class="card boil" data-src="../props/torn-frames/torn-card-420x340/f{i}.png" style="left:510px;top:505px;width:540px;transform:rotate(2.5deg) scaleX(-1)"><div class="page" style="left:570px;top:560px;width:420px;height:330px;transform:rotate(2.5deg)"><div class="note" style="font-size:76px;text-align:center;margin-top:96px">วันนี้</div>
+<svg id="laurel" style="position:absolute;inset:0;width:420px;height:330px"></svg>
+<div class="cav" style="position:absolute;left:24px;top:14px;font-size:32px">fig. 2</div></div>
+<div class="tape" style="left:720px;top:540px;transform:rotate(5deg)"></div>
+<svg class="ov" filter="url(#rough)"><g class="ln" stroke-width="3" stroke="#7A5C43"><path d="M300 930 L780 930 M300 912 L300 948 M780 912 L780 948 M300 930 L326 918 M300 930 L326 942 M780 930 L754 918 M780 930 L754 942"/></g>
+<text x="540" y="985" text-anchor="middle" font-family="Trirong" font-weight="700" font-size="40" fill="#7A5C43">ระยะห่าง = ข้ออ้าง</text>
+<path class="ln" d="M540 1000 m-230 0 a230 230 0 0 1 460 0" stroke="#7A5C43" stroke-width="2" stroke-dasharray="10 12" opacity=".7"/></svg>
+<img class="host boil" data-src="../host/socrates/04-skeptical/f{i}.png" style="width:980px;left:60px;bottom:-190px">
+<div class="fiber"></div><div class="blot"></div><div class="burn"></div></div>
+
+<script>
+const FI=(location.hash.slice(1)||"0");document.querySelectorAll("img.boil").forEach(im=>im.src=im.dataset.src.replace("{i}",FI));
+
+function rnd(s){return()=>{s=(s*16807)%2147483647;return s/2147483647}}
+document.querySelectorAll('svg.scrib').forEach(sv=>{const r=rnd(+sv.dataset.seed);let h='';
+ for(let i=0;i<46;i++){const edge=r()<.8;let x=edge?(r()<.5?r()*240:840+r()*240):r()*1080,y=r()*1920;
+  let d=`M${x.toFixed(0)} ${y.toFixed(0)}`;const n=2+Math.floor(r()*4);
+  for(let k=0;k<n;k++){const dx=(r()-.5)*260,dy=(r()-.5)*160;d+=` q${(dx*r()).toFixed(0)} ${(dy*2*r()-dy).toFixed(0)} ${dx.toFixed(0)} ${dy.toFixed(0)}`}
+  h+=`<path d="${d}" fill="none" stroke="#5a4130" stroke-width="${(0.8+r()*1.6).toFixed(1)}" stroke-linecap="round" opacity="${(0.3+r()*.5).toFixed(2)}"/>`}
+ for(let i=0;i<10;i++){const x=r()*1080,y=r()*1920;h+=`<path d="M${x} ${y} l${(r()-.5)*40} ${300+r()*500}" stroke="#5a4130" stroke-width="1" opacity=".35"/>`}
+ sv.innerHTML=h});
+// laurel wreath around "วันนี้"
+(()=>{const sv=document.getElementById('laurel');let h='';const cx=210,cy=160,rx=170,ry=115,D=Math.PI/180;
+ const P=t=>[cx+rx*Math.cos(t),cy+ry*Math.sin(t)];
+ for(const [t0,t1] of [[100,225],[80,-45]]){let d='';const n=24;
+  for(let i=0;i<=n;i++){const [x,y]=P((t0+(t1-t0)*i/n)*D);d+=(i?' L':'M')+x.toFixed(1)+' '+y.toFixed(1)}
+  h+=`<path d="${d}" fill="none" stroke="#3A2A1E" stroke-width="3" stroke-linecap="round"/>`;
+  for(let i=1;i<=8;i++){const t=(t0+(t1-t0)*i/8.6)*D;const [x,y]=P(t);
+   let ang=Math.atan2(ry*Math.cos(t),-rx*Math.sin(t))/D; if(t1<t0) ang+=180;
+   for(const o of [-1,1]) h+=`<ellipse cx="0" cy="-17" rx="8" ry="18" transform="translate(${x.toFixed(1)} ${y.toFixed(1)}) rotate(${(ang+90+o*48).toFixed(0)})" fill="#E2CC98" stroke="#3A2A1E" stroke-width="2.5"/>`}}
+ h+=`<path d="M336 40 l18 22 l40 -50" fill="none" stroke="#A8432A" stroke-width="12" stroke-linecap="round" stroke-linejoin="round" filter="url(#chalk)"/>`;
+ sv.innerHTML=h})();
+</script>
+</body></html>
