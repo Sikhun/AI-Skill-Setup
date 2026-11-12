@@ -11,3 +11,7 @@ The scripts and setup files in this repository are compiled and modified solely 
 ## 📖 เกี่ยวกับโปรเจกต์ (About)
 (TH) แหล่งรวบรวมไฟล์ Config และ Script สำหรับการเซ็ตอัประบบ AI Skill ที่ใช้ในคลิปวิดีโอสอน 
 (EN) A collection of configuration files and scripts for AI Skill setup used in the video tutorial.
+
+## 🚀 วิธีการติดตั้ง (Installation)
+1. คลิกที่คำว่า Code สีเขียว
+2. คลิก Download ZIP
